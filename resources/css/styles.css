@@ -1,0 +1,144 @@
+/* Extra small devices (phones, less than 768px) */
+/* No media query since this is the default in Bootstrap */
+
+/*#DCE0E6*/
+
+body{
+    overflow-y: scroll;
+    background-color: #e0f2bf;
+    font-family: 'Open Sans', sans-serif;
+    color: #2d410c;
+}
+
+.header {
+    padding-top: 10em;
+    font-family: 'Quicksand', sans-serif;
+    -webkit-transition: padding-top .25s linear;
+    -moz-transition: padding-top .25s linear;
+    transition: padding-top .25s linear;
+}
+
+.brand-heading {
+    font-size: 3.75em;
+    font-weight: 700;
+    color: #567EBB;
+    text-shadow: 2px 4px 3px #ABD0D8; 
+}
+
+#log-span {
+    color: #B42215;
+    text-shadow: 2px 4px 3px #eaa; 
+}
+
+.account-info-div {
+    padding: 2em 0;
+    -webkit-transition: padding-top .25s linear;
+    -moz-transition: padding-top .25s linear;
+    transition: padding-top .25s linear;
+}
+
+.account-info-div,
+.form-holder { 
+    font-size: 1.4em
+}
+
+.account-info-div .btn {
+    margin: 0 .15em;
+}
+.account-info-div .btn,
+#btn-goback-login,
+#btn-goback-signup,
+#btn-login,
+#btn-signup {
+    width: 125px;
+    font-size: 1em;
+}
+
+#btn-login,
+#btn-signup {
+    margin-bottom: 6em;
+}
+
+.form-holder {
+    padding-top: 6em;
+    width: 100%;
+}
+
+.login-div {
+    height: 19em;
+}
+
+.signup-div {
+    height: 29.5em;
+}
+
+@media only screen and (min-width: 520px) {
+    .brand-heading {
+        font-size: 4.5em;
+        text-shadow: 2.5px 5px 3px #ABD0D8; 
+    }
+
+    #log-span {
+        text-shadow: 2.5px 5px 3px #eaa; 
+    }
+}
+
+/* Small devices (tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    .brand-heading {
+        padding: 0 0 3rem;
+        font-size: 6em;
+        text-shadow: 3px 6px 3px #ABD0D8; 
+    }
+
+    #log-span {
+        text-shadow: 3px 6px 3px #eaa; 
+    }
+
+    .account-info-div {
+        padding: 0;
+    }
+
+    .account-info-div,
+    .form-holder { 
+        font-size: 1em
+    }
+
+    .account-info-div .btn,
+    #btn-goback-login,
+    #btn-goback-signup,
+    #btn-login,
+    #btn-signup {
+        width: 95px;
+        font-size: 1.2em;
+    }
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    .brand-heading {
+        padding: 3rem 0 5.2rem;
+        font-size: 7em;
+    }
+
+    .account-info-div .btn,
+    #btn-goback-login,
+    #btn-goback-signup,
+    #btn-login,
+    #btn-signup {
+        width: 100px;
+        font-size: 1.2em;
+    }
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+    .account-info-div .btn,
+    #btn-goback-login,
+    #btn-goback-signup,
+    #btn-login,
+    #btn-signup {
+        width: 125px;
+        font-size: 1.5em;
+    }
+}
