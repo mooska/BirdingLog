@@ -1,0 +1,78 @@
+@{ 
+    ViewBag.Title = "BirdingLog";
+    Layout = "_Layout";
+}
+<div class="header">
+    <div class="col-xs-12 col-sm-12 text-center">
+        <h1 class="brand-heading">Birding<span id="log-span">Log</span></h1>
+    </div>
+    <div class="col-xs-12 col-sm-12 text-center account-info-div">
+        <a href="#" id="btn-login" class="btn btn-info">Log In</a>
+        <a href="#" id="btn-signup" class="btn btn-primary">Sign Up</a>
+    </div>
+</div>
+<div class="form-holder login-div" style="display: none">
+    <div class="col-xs-2 col-sm-3 col-md-4"></div>
+    <div class="col-xs-8 col-sm-6 col-md-4">
+        <form id="login-form">
+            <div class="form-group">
+                <label for="login-username">Username</label>
+                <input type="text" class="form-control" id="login-username">
+            </div>
+            <div class="form-group">
+                <label for="login-password">Password</label>
+                <input type="password" class="form-control" id="login-password">
+            </div>
+            <div class="text-center">
+                <button id="btn-goback-login" class="btn btn-lg btn-link">Go Back</button>
+            </div>
+            <div class="text-center">
+                <button id="btn-login" type="submit" class="btn btn-lg  btn-primary">Log In</button>
+            </div>
+        </form>
+    </div>
+    <div class="col-xs-2 col-sm-3 col-md-4"></div>
+</div>
+
+<div class="form-holder signup-div" style="display: none">
+    <div class="col-xs-2 col-sm-3 col-md-4"></div>
+    <div class="col-xs-8 col-sm-6 col-md-4">
+        <form id="signup-form">
+            <div class="form-group row">
+                <div class="col-md-6">
+                    <label for="signup-first-name">First Name</label>
+                    <input type="text" class="form-control" id="signup-first-name">
+                </div>
+                <div class="col-md-6">
+                    <label for="signup-last-name">Last Name</label>
+                    <input type="text" class="form-control" id="signup-last-name">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="signup-username">Username</label>
+                <input type="text" class="form-control" id="signup-username">
+            </div>
+            <div class="form-group row">
+                <div class="col-md-6">
+                    <label for="signup-password">Password</label>
+                    <input type="password" class="form-control" id="signup-password">
+                </div>
+                <div class="col-md-6">
+                    <label for="signup-password-verify">Verify Password</label>
+                    <input type="password" class="form-control" id="signup-password-verify">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="signup-username">Email</label>
+                <input type="email" class="form-control" id="signup-username">
+            </div>
+            <div class="text-center">
+                <button id="btn-goback-signup" class="btn btn-link">Go Back</button>
+            </div>
+            <div class="text-center">
+                <button id="btn-signup" type="submit" class="btn btn-lg btn-primary">Log In</button>
+            </div>
+        </form>
+    </div>
+    <div class="col-xs-2 col-sm-3 col-md-4"></div>
+</div>

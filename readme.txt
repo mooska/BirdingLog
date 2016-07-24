@@ -1,1 +1,0 @@
-A social birding web application built on top of .NET Core.
