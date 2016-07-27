@@ -1,33 +1,78 @@
 /* Extra small devices (phones, less than 768px) */
 /* No media query since this is the default in Bootstrap */
 
-/*#DCE0E6*/
+/*#DCE0E6
+7B6150*/
 
 body{
     overflow-y: scroll;
-    background-color: #e0f2bf;
     font-family: 'Open Sans', sans-serif;
-    color: #2d410c;
+    background-color: #FFfFef;
+}
+
+#login-body {
+    background-color: #e0f2bf;
 }
 
 .header {
-    padding-top: 10em;
     font-family: 'Quicksand', sans-serif;
     -webkit-transition: padding-top .25s linear;
     -moz-transition: padding-top .25s linear;
     transition: padding-top .25s linear;
 }
 
+.navbar {
+    background-color: #e0f2bf;
+
+}
+
+.navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover {
+    background-color: #e0f2bf;
+}
+
 .brand-heading {
-    font-size: 3.75em;
     font-weight: 700;
     color: #567EBB;
-    text-shadow: 2px 4px 3px #ABD0D8; 
+    font-size: 2em;
+    text-shadow: 2px 3px 2px #ABD0D8;
+}
+
+.navbar-default .navbar-brand:focus, .navbar-default .navbar-brand:hover {
+    text-decoration: none;
+    color: #42618F;
+}
+
+.navbar .brand-heading {
+    padding-left: .25em;
+    color: #567EBB;
+}
+
+.login-heading {
+    font-size: 3.75em;
+    text-shadow: 2px 4px 3px #ABD0D8;
+    padding-bottom: .5em;
 }
 
 #log-span {
     color: #B42215;
-    text-shadow: 2px 4px 3px #eaa; 
+    text-shadow: 2px 4px 2px #eaa; 
+}
+
+.brand-heading #log-span {
+    color: #B42215;
+    text-shadow: 2px 3px 3px #eaa; 
+}
+
+#navbar-button {
+    background-color: #B42215;
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+    background-color: #eaa;
+}
+
+#log-span:hover {
+    color: #8C1B11;
 }
 
 .account-info-div {
@@ -72,8 +117,92 @@ body{
     height: 29.5em;
 }
 
+/*    This is where I started the index specific stuff... professionalism     */
+
+.top-div {
+    height: 20em;
+}
+
+.welcome-div {
+    height: 4em;
+}
+
+.welcome-div h2 {
+    margin: 0;
+}
+
+.profile-console {
+    height: 16em;
+    padding: 0em;
+    background: #e0f2bf;
+}
+
+.profile-picture {
+    border-radius: 50em;
+    height: 10em;
+    border: 4px solid #cce995;
+}
+
+.profile-details {
+    border-right: 0px solid #101f10;
+    padding: 1em;
+}
+
+.profile-console p {
+    font-weight: 700;
+    font-size: 1.5em;
+    margin: 0;
+}
+
+.profile-achievements {
+    padding: 0em;
+    height: 16.1em;
+    display: flex;
+    flex-direction: column;
+}
+
+.profile-achievement {
+    height: 8.05em;
+    
+}
+
+.profile-achievement p {
+    vertical-align: middle;
+    text-align: center;
+    padding:2em 0em;
+    
+}
+
+.achievement-seperator {
+    border: solid 0px #101f10;
+}
+
+.image-feed-title {
+    padding-top: .75em;
+    font-size: 1.75em;
+}
+
+.image-feed img {
+    border-radius: 10px;
+    height: 120px;
+    margin: 10px;
+    border: 3px solid #e0f2bf;
+}
+
+/*    This is where I started the contact specific stuff... professionalism     */
+
+#contact-page-div {
+    text-align: center;
+}
+
+.formgroup {
+    margin: 20px;
+}
+
+
+
 @media only screen and (min-width: 520px) {
-    .brand-heading {
+    .login-heading {
         font-size: 4.5em;
         text-shadow: 2.5px 5px 3px #ABD0D8; 
     }
@@ -85,7 +214,7 @@ body{
 
 /* Small devices (tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
-    .brand-heading {
+    .login-heading {
         padding: 0 0 3rem;
         font-size: 6em;
         text-shadow: 3px 6px 3px #ABD0D8; 
@@ -101,7 +230,7 @@ body{
 
     .account-info-div,
     .form-holder { 
-        font-size: 1em
+        font-size: 1em;
     }
 
     .account-info-div .btn,
@@ -116,7 +245,7 @@ body{
 
 /* Medium devices (desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
-    .brand-heading {
+    .login-heading {
         padding: 3rem 0 5.2rem;
         font-size: 7em;
     }

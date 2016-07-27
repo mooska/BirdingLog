@@ -8,6 +8,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{76EC2C93-8B75-4E3A-93B5-057410F2F416}"
 	ProjectSection(SolutionItems) = preProject
 		global.json = global.json
+		WE-browsers.xml = WE-browsers.xml
 	EndProjectSection
 EndProject
 Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "BirdingLog", "src\BirdingLog\BirdingLog.xproj", "{A0FE9803-D3A4-46AF-80D2-7D9C8C7AEE36}"
