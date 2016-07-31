@@ -32,6 +32,7 @@
             <textarea asp-for="Message" type="text" class="form-control"></textarea>
             <span asp-validation-for="Message"></span>
         </div>
-        <button class="btn btn-default contact-submit" type="submit">Submit</button>
+        <a asp-controller="App" asp-action="Index" class="btn btn-default">Cancel</a>
+        <button class="btn btn-success contact-submit" type="submit">Submit</button>
     </form>
 </div>
