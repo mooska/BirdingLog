@@ -1,3 +1,4 @@
+using BirdingLog.Models;
 using BirdingLog.Services;
 using BirdingLog.ViewModels;
 using Microsoft.AspNetCore.Mvc;
@@ -14,15 +15,19 @@ namespace BirdingLog.Controllers.Web
     {
         private IMailService _mailService;
         private IConfigurationRoot _config;
+        private BirdingLogContext _context;
 
-        public AppController(IMailService mailService, IConfigurationRoot config)
+        public AppController(IMailService mailService, IConfigurationRoot config, BirdingLogContext context)
         {
             _mailService = mailService;
             _config = config;
+            _context = context;
         }
 
         public IActionResult Index()
         {
+            var data = _context.Photos.ToList();
+
             return View();
         }
 

@@ -3,13 +3,21 @@
     Layout = "_Layout";
 }
 
-<div class="top-div">
+@section stylesheets {
+
+}
+
+@section scripts {
+
+}
+
+<div id="index-top-div">
     <div class="welcome-div text-center"><h2>Welcome back, Ryan!</h2></div>
     <div class="hidden-xs col-sm-3"></div>
     <div class="profile-console col-xs-12">
         <div class="col-xs-12 col-sm-2"></div>
         <div class="profile-details col-xs-12 col-sm-3 text-center">
-            <img src="http://www.ryancatkins.com/assets/images/face.jpg" alt="profile picture" class="profile-picture" />
+            <img src="http://www.ryancatkins.com/assets/images/face.jpg" alt="profile picture" class="profile-picture"/>
             <p>Columbus, OH</p>
             <p>Marathoner</p>
         </div>
@@ -28,7 +36,7 @@
 <div class="middle-div">
     <div class="image-feed text-center">
         <h2 class="image-feed-title">Top Photos of The Week</h2>
-        <img src="http://loremflickr.com/320/320/parrot" alt="">
+        <img src="http://loremflickr.com/320/320/parrot" class="tooltip" title="This is my image's tooltip message!" alt="">
         <img src="http://loremflickr.com/320/320/bird" alt="">
         <img src="http://loremflickr.com/320/320/birds" alt="">
         <img src="http://loremflickr.com/320/320/eagle" alt="">

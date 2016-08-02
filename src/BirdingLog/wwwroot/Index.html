@@ -24,30 +24,31 @@
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
                 <button type="button" id="navbar-button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
-                        aria-expanded="false">
+                    aria-expanded="false">
                     <span class="sr-only">Toggle navigation</span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a href="#" class="navbar-brand brand-heading">Birding<span id="log-span">Log</span></a>
+                <a asp-controller="App" asp-action="Index" class="navbar-brand brand-heading">Birding<span id="log-span">Log</span></a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav navbar-right">
-                    <li class="dropdown text-center">
+                <ul class="nav navbar-nav navbar-right text-center">
+                    <li><a asp-controller="App" asp-action="Contact">Contact</a></li>
+                    <li class="dropdown">
                         <a href="#" class="dropdown-toggle hidden-xs" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Logged in as Ryan Atkins <span class="caret"></span></a>
                         <ul class="dropdown-menu hidden-xs">
-                            <li><a href="#">Account Settings</a></li>
-                            <li><a href="#">Profile Information</a></li>
+                            <li><a asp-controller="App" asp-action="Settings">Account Settings</a></li>
+                            <li><a asp-controller="App" asp-action="ProfileInfo">Profile Information</a></li>
                             <li role="separator" class="divider"></li>
                             <li><a href="#">Log Out</a></li>
                         </ul>
-                    <li class="visible-xs text-center"><a href="#">Account Settings</a></li>
-                    <li class="visible-xs text-center"><a href="#">Profile Information</a></li>
-                    <li role="separator" class="divider"></li>
-                    <li class="visible-xs text-center"><a href="#">Log Out</a></li>
+                        <li class="visible-xs text-center"><a asp-controller="App" asp-action="Settings">Account Settings</a></li>
+                        <li class="visible-xs text-center"><a asp-controller="App" asp-action="ProfileInfo">Profile Information</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li class="visible-xs text-center"><a href="#">Log Out</a></li>
                     </li>
                 </ul>
             </div>
@@ -55,63 +56,26 @@
         </div>
         <!-- /.container-fluid -->
     </nav>
+    <div class="hidden-xs col-sm-3 col-md-2"></div>
+    <div class="col-xs-12 col-sm-6 col-md-8" id="profile-page-div">
+        <h2 class="page-title">Profile Info</h2>
 
-    <!-- THIS IS WHERE YOU ARE STARTING YOUR VIEW -->
-
-    <div class="top-div">
-        <div class="welcome-div text-center"><h2>Welcome back, Ryan!</h2></div>
-        <div class="hidden-xs col-sm-3"></div>
-        <div class="profile-console col-xs-12">
-            <div class="col-xs-12 col-sm-2"></div>
-            <div class="profile-details col-xs-12 col-sm-3 text-center">
-                <img src="http://www.ryancatkins.com/assets/images/face.jpg" alt="profile picture" class="profile-picture" />
-                <p>Columbus, OH</p>
-                <p>Marathoner</p>
-            </div>
-            <div class="hidden-xs col-sm-7 profile-achievements">
-                <div class="profile-achievement">
-                    <p>Last photo posted: Blue Jay</p>
-                </div>
-                <div class="achievement-seperator"></div>
-                <div class="profile-achievement">
-                    <p>Total photos taken: 327</p>
-                </div>
-            </div>
-        </div>
-        <div class="hidden-xs col-sm-3"></div>
-    </div>
-    <div class="middle-div">
-        <div class="image-feed text-center">
-            <h2 class="image-feed-title">Top Photos of The Week</h2>
-            <img src="http://loremflickr.com/320/320/parrot" alt="">
-            <img src="http://loremflickr.com/320/320/bird" alt="">
-            <img src="http://loremflickr.com/320/320/birds" alt="">
-            <img src="http://loremflickr.com/320/320/eagle" alt="">
-            <img src="http://loremflickr.com/320/320/hawk" alt="">
-            <img src="http://loremflickr.com/320/320/bluejay" alt="">
-            <img src="http://loremflickr.com/320/320/cardinal" alt="">
-            <img src="http://loremflickr.com/320/320/africangray" alt="">
-            <img src="http://loremflickr.com/320/320/flamingo" alt="">
-            <img src="http://loremflickr.com/320/320/duck" alt="">
-            <img src="http://loremflickr.com/320/320/pigon" alt="">
-            <img src="http://loremflickr.com/320/320/falcon" alt="">
-            <img src="http://loremflickr.com/320/320/raptor" alt="">
-            <img src="http://loremflickr.com/320/320/hummingbird" alt="">
-            <img src="http://loremflickr.com/320/320/parakeet" alt="">
-            <img src="http://loremflickr.com/320/320/wigeon" alt="">
-            <img src="http://loremflickr.com/320/320/crow" alt="">
-            <img src="http://loremflickr.com/320/320/finch" alt="">
-            <img src="http://loremflickr.com/320/320/gull" alt="">
-            <img src="http://loremflickr.com/320/320/gamebird" alt="">
+        <div class="top-div table table-striped">
+            <ul class="list-group">
+                <li class="list-group-item">Show</li>
+                <li class="list-group-item"></li>
+                <li class="list-group-item"></li>
+                <li class="list-group-item"></li>
+                <li class="list-group-item"></li>
+                <li class="list-group-item"></li>
+            </ul>
         </div>
     </div>
-
-    <!-- THIS IS WHERE YOU ARE ENDING YOUR VIEW -->
-
-
-    @RenderBody()
+    <div class="hidden-xs col-sm-3 col-md-2"></div>
     <script src="lib/jquery/dist/jquery.min.js"></script>
     <script src="lib/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="lib/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
     <script src="resources/js/scripts.js"></script>
 </body>
 

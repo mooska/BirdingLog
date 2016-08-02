@@ -1,5 +1,8 @@
 {
   "MailSettings": {
-    "ToAddress":  "me@ryancatkins.com"
+    "ToAddress": "me@ryancatkins.com"
+  },
+  "ConnectionStrings": {
+    "BirdingLogConnection": "Server=(localdb)\\MSSQLLocalDB;Database=BirdingLogDb;Trusted_Connection=true;MultipleActiveResultSets=true;"
   }
 }

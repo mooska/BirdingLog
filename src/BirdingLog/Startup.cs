@@ -8,6 +8,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
 using BirdingLog.Services;
 using Microsoft.Extensions.Configuration;
+using BirdingLog.Models;
 
 namespace BirdingLog
 {
@@ -40,7 +41,11 @@ namespace BirdingLog
             else
             {
                 //implement real mail service
+
             }
+
+            services.AddDbContext<BirdingLogContext>();
+
             services.AddMvc();
         }
 

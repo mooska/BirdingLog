@@ -2,12 +2,13 @@
   "name": "asp.net",
   "private": true,
   "dependencies": {
-    "underscore": "~1.8.3",
+    "angular2": "~1.5.8",
+    "bootstrap": "~3.3.6",
+    "bootstrap-switch": "~3.3.2",
     "jquery": "~3.1.0",
     "jquery-validation": "~1.15.1",
     "jquery-validation-unobtrusive": "~3.2.6",
-    "bootstrap": "~3.3.6",
-    "angular2": "~1.5.8"
+    "underscore": "~1.8.3"
   },
   "resolutions": {
     "jquery": "~3.1.0"

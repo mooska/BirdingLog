@@ -3,13 +3,49 @@
     Layout = "_Layout";
 }
 
-<h2 class="page-title">Profile Info</h2>
+@section stylesheets {
+    <link href="~/lib/bootstrap-switch/dist/css/bootstrap3/bootstrap-switch.min.css" rel="stylesheet" />
+}
 
-<div class="top-div">
-    <span class="profile-detail"></span>
-    <span class="profile-detail"></span>
-    <span class="profile-detail"></span>
-    <span class="profile-detail"></span>
-    <span class="profile-detail"></span>
-    <span class="profile-detail"></span>
+@section scripts {
+    <script src="~/lib/bootstrap-switch/dist/js/bootstrap-switch.min.js"></script>
+}
+
+<div id="profile-info-top-div">
+    <div class="hidden-xs col-sm-3 col-md-4"></div>
+    <div class="col-xs-12 col-sm-6 col-md-4" id="profile-page-div">
+        <h2 class="page-title">Profile Info</h2>
+        <form class="form-group text-center">
+            <div class="info-div">
+                <div class="col-xs-12 col-sm-6"><p>Set Profile to Private</p></div>
+                <div class="col-xs-12 col-sm-6">
+                    <input type="checkbox" name="my-checkbox" id="private-checkbox" checked>
+                </div>
+            </div>
+            <div class="info-div">
+                <div class="col-xs-12 col-sm-6"><p>Display your location</p></div>
+                <div class="col-xs-12 col-sm-6">
+                    <input type="checkbox" name="my-checkbox" id="location-checkbox" checked>
+                </div>
+            </div>
+            <div class="info-div">
+                <div class="col-xs-12 col-sm-6"><p>Share Linked Social Media</p></div>
+                <div class="col-xs-12 col-sm-6">
+                    <input type="checkbox" name="my-checkbox" id="social-checkbox" checked>
+                </div>
+            </div>
+            <div class="info-div">
+                <div class="col-xs-1 hidden-md"></div>
+                <div class="form-group col-xs-10 col-md-12">
+                    <label for="profile-pic-upload">Upload Profile Picture</label><br />
+                    <input type="file" class="form-control" id="profile-pic-upload">
+                    <p class="help-block">Max: 300px by 300px.</p>
+                </div>
+                <div class="col-xs-1 hidden-md"></div>
+            </div>
+            <button type="reset" class="btn btn-default">Cancel</button>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+    <div class="hidden-xs col-sm-3 col-md-4"></div>
 </div>

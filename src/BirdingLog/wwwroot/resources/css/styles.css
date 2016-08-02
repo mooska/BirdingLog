@@ -117,9 +117,13 @@ body{
     height: 29.5em;
 }
 
+.page-title {
+    margin-bottom: 30px;
+}
+
 /*    This is where I started the index specific stuff... professionalism     */
 
-.top-div {
+#index-top-div {
     height: 20em;
 }
 
@@ -191,7 +195,8 @@ body{
 
 /*    This is where I started the contact specific stuff... professionalism     */
 
-#contact-page-div {
+#contact-page-div,
+#profile-page-div {
     text-align: center;
 }
 
@@ -199,6 +204,23 @@ body{
     margin: 20px;
 }
 
+/*    This is where I started the profile information specific stuff... professionalism     */
+
+#profile-info-top-div {
+    height: 527px;
+}
+
+.info-div {
+    height: 74px;
+}
+
+.info-div p {
+    margin: 0;
+}
+
+#profile-pic-upload {
+    display: inline-block;
+}
 
 
 @media only screen and (min-width: 520px) {
@@ -210,6 +232,10 @@ body{
     #log-span {
         text-shadow: 2.5px 5px 3px #eaa; 
     }
+
+    .page-title {
+        margin-bottom: 45px;
+    } 
 }
 
 /* Small devices (tablets, 768px and up) */
@@ -241,6 +267,10 @@ body{
         width: 95px;
         font-size: 1.2em;
     }
+
+    /*.page-title {
+        margin-bottom: 65px;
+    }*/   
 }
 
 /* Medium devices (desktops, 992px and up) */

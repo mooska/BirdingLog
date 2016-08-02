@@ -21,3 +21,4 @@ function gobackButtonPress(button, hideDiv) {
     });
 }
 
+$("[name='my-checkbox']").bootstrapSwitch();
