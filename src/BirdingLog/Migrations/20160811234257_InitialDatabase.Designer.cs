@@ -8,7 +8,7 @@ using BirdingLog.Models;
 namespace BirdingLog.Migrations
 {
     [DbContext(typeof(BirdingLogContext))]
-    [Migration("20160802020650_InitialDatabase")]
+    [Migration("20160811234257_InitialDatabase")]
     partial class InitialDatabase
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -36,6 +36,8 @@ namespace BirdingLog.Migrations
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd();
 
+                    b.Property<int?>("BirdId");
+
                     b.Property<double>("Latitude");
 
                     b.Property<double>("Longitude");
@@ -48,7 +50,16 @@ namespace BirdingLog.Migrations
 
                     b.HasKey("Id");
 
+                    b.HasIndex("BirdId");
+
                     b.ToTable("Photos");
+                });
+
+            modelBuilder.Entity("BirdingLog.Models.Photo", b =>
+                {
+                    b.HasOne("BirdingLog.Models.Bird")
+                        .WithMany()
+                        .HasForeignKey("BirdId");
                 });
         }
     }

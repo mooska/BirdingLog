@@ -1,4 +1,5 @@
 ﻿using System;
+using System.ComponentModel.DataAnnotations;
 
 namespace BirdingLog.Models
 {
@@ -10,5 +11,7 @@ namespace BirdingLog.Models
         public double Latitude { get; set; }
         public double Longitude { get; set; }
         public DateTime Taken { get; set; }
+
+        public Bird Bird { get; set; }
     }
 }

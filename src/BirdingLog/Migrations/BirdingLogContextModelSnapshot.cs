@@ -35,6 +35,8 @@ namespace BirdingLog.Migrations
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd();
 
+                    b.Property<int?>("BirdId");
+
                     b.Property<double>("Latitude");
 
                     b.Property<double>("Longitude");
@@ -47,7 +49,16 @@ namespace BirdingLog.Migrations
 
                     b.HasKey("Id");
 
+                    b.HasIndex("BirdId");
+
                     b.ToTable("Photos");
+                });
+
+            modelBuilder.Entity("BirdingLog.Models.Photo", b =>
+                {
+                    b.HasOne("BirdingLog.Models.Bird")
+                        .WithMany()
+                        .HasForeignKey("BirdId");
                 });
         }
     }
